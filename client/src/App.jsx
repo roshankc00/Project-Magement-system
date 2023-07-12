@@ -1,9 +1,17 @@
 import React from 'react'
+import Header from './components/Navbar'
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import Client from './pages/Client'
 
 const App = () => {
   return (
+
     <div>
-      form client 
+      <Header/>
+      <Routes>
+        <Route path='/client'element={<Client/>}/>
+      </Routes>
+
     </div>
   )
 }
