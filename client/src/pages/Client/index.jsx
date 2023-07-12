@@ -1,11 +1,10 @@
-import Table from 'react-bootstrap/Table';
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
+import Table from 'react-bootstrap/Table';;
 import { Button } from "bootstrap";
 import { gql,useQuery } from "@apollo/client"
 import { GET_CLIENT } from '../../Queries/clientQuery';
 import LoadingSpinner from '../../components/Spinner';
 import ClientRow from '../../components/ClientRow';
+import AddClient from '../../components/modals/AddClient';
 
 const Client = () => {
 
@@ -18,7 +17,13 @@ const Client = () => {
    }
   return (
     <div className="container">
+      <div className="d-flex justify-content-between align-align-items-center">
+
         <h1 className="fs-3 text-center my-4" >User-Details</h1>
+        <AddClient/>
+      </div>
+        
+
         {
             !loading && !error &&
 
