@@ -3,6 +3,7 @@ import LoadingSpinner from '../../components/Spinner'
 import { useQuery } from '@apollo/client'
 import { GET_PROJECT } from '../../Queries/projectQuery'
 import ProjectCard from '../../components/Cards/ProjectCard'
+import AddProject from '../../components/modals/AddProject'
 
 function Project() {
     const {loading,error,data}=useQuery(GET_PROJECT)
@@ -20,6 +21,11 @@ function Project() {
 
   return (
     <div className='mt-4 container'>
+        <div className="d-flex justify-content-between align-items-center my-4" > 
+        <h1>Project</h1>
+        <AddProject/>
+        
+         </div>
 
 {
     data.projects.length>0? 

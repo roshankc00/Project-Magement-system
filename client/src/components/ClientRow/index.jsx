@@ -27,9 +27,7 @@ const ClientRow = ({client}) => {
             }}>
             <DeleteIcon/>
         </button>
-        <button className="ms-1 shadow-none buttonwala">
-            <EditIcon/>
-        </button>
+        
     </td>
   </tr>
   )

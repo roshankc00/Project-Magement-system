@@ -2,7 +2,7 @@ import { useMutation } from "@apollo/client";
 import { useState } from "react";
 import { GET_CLIENT } from "../../../Queries/clientQuery";
 import { ADD_CLIENT } from "../../../Mutation/clientMutation";
-
+import PersonIcon from '@mui/icons-material/Person';
 export default function AddClient() {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
@@ -41,13 +41,12 @@ export default function AddClient() {
         className="btn btn-primary mt-3"
         data-bs-toggle="modal"
         data-bs-target="#AddClientModal"
-      >
+      ><PersonIcon className=" mb-1 mx-1"/>
         Add Client
       </button>
       <div
         className="modal fade"
         id="AddClientModal"
-        tabindex="-1"
         aria-labelledby="AddClientModalLabel"
         aria-hidden="true"
       >
